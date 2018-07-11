@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 
-// GET home page
-router.get('/home', (req, res, next) => {
-    res.send('Well HAllo there!!!!!');
+// GET alerts
+router.get('/all', (req, res, next) => {
+    res.send('Display alerts');
 });
 
 module.exports = router;
