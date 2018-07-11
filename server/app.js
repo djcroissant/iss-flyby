@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 
 const indexRouter = require('./routes/index.js');
 const usersRouter = require('./routes/users.js');
@@ -9,6 +10,16 @@ const alertsRouter = require('./routes/alerts.js');
 
 const app = express();
 
+
+// Setup default mongoose connection
+const mongoDB = 'mongodb://127.0.0.1/iss_alerts';
+mongoose.connect(mongoDB);
+// Get Mongoose to use the global promise library
+mongoose.Promise = global.Promise;
+// Get the default connection
+const db = mongoose.connection;
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 let port = 8000 || process.env.port
 
