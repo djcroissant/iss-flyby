@@ -29,4 +29,4 @@ AlertSchema.methods.getUserAlerts = function(_id) {
     });
 }
 
-const AlertModel = mongoose.model('AlertModel', AlertSchema)
+module.exports = mongoose.model('AlertModel', AlertSchema);
