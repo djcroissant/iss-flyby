@@ -15,10 +15,6 @@ let AlertSchema = new Schema({
         type: Boolean,
         default: true
     },
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    },
     location: {
         type: Schema.Types.ObjectId,
         ref: 'Location'
@@ -26,5 +22,11 @@ let AlertSchema = new Schema({
 }, {
     timestamps: true
 });
+
+AlertSchema.methods.getUserAlerts = function(_id) {
+    Alert.find({'owner': _id}).then((alerts) => {
+        return alerts;
+    });
+}
 
 const AlertModel = mongoose.model('AlertModel', AlertSchema)

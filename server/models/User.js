@@ -11,12 +11,13 @@ let UserSchema = new Schema({
         type: String,
         required: true
     },
-    alert: {
+    alerts: [{
         type: Schema.Types.ObjectId,
         ref: 'Alert'
-    }
+    }]
 }, {
     timestamps: true
 });
+
 
 const UserModel = mongoose.model('UserModel', UserSchema)
