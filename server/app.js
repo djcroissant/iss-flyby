@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
@@ -12,7 +14,7 @@ const app = express();
 
 
 // Setup default mongoose connection
-const mongoDB = 'mongodb://127.0.0.1/iss_alerts';
+const mongoDB = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds235411.mlab.com:35411/iss_tracker`;
 mongoose.connect(mongoDB);
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
