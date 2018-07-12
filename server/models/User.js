@@ -12,11 +12,7 @@ let UserSchema = new Schema({
         type: String,
         required: true,
         max: 100
-    },
-    alerts: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Alert'
-    }]
+    }
 }, {
     timestamps: true
 });

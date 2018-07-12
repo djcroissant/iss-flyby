@@ -10,7 +10,7 @@ let LocationSchema = new Schema({
     },
     latitude: {
         type: Number,
-        min: 0,
+        min: -90,
         max: 90,
         required: true
     },
