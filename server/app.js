@@ -6,9 +6,10 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
-const indexRouter = require('./routes/index.js');
-const usersRouter = require('./routes/users.js');
-const alertsRouter = require('./routes/alerts.js');
+const homeRouter = require('./routes/home.js');
+const alertRouter = require('./routes/alerts.js');
+const locationRouter = require('./routes/locations.js');
+const userRouter = require('./routes/users.js');
 
 const app = express();
 
@@ -20,7 +21,7 @@ mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 // Get the default connection
 const db = mongoose.connection;
-//Bind connection to error event (to get notification of connection errors)
+// Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 let port = 8000 || process.env.port
@@ -31,9 +32,10 @@ app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '../public')));
 
 // define route namespaces
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/alerts', alertsRouter);
+app.use('/', homeRouter);
+app.use('/alerts', alertRouter);
+app.use('/locations', locationRouter);
+app.use('/user', userRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
