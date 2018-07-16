@@ -2,6 +2,7 @@
   "name": "iss-full",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "async": "^2.6.1",
     "dotenv": "^6.0.0",
@@ -15,7 +16,7 @@
     "serve-favicon": "^2.5.0"
   },
   "scripts": {
-    "start": "node ./server/app.js",
+    "start": "react-scripts start",
     "devstart": "nodemon ./server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
