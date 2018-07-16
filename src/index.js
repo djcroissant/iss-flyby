@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/app.css';
+// import './assets/css/app.css';
 import { Provider } from 'react-redux';
 
 import { Switch, Route } from 'react-router-dom';

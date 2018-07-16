@@ -24,7 +24,7 @@ const db = mongoose.connection;
 // Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-let port = 8000 || process.env.port
+let port = 8001 || process.env.port
 
 // add middleware libraries
 app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));

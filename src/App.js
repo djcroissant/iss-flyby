@@ -3,10 +3,10 @@ import Header from './components/Header';
 import { Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
-import Profile from './components/Profile'
-import AlertList from './components/AlertList'
-import AlertEdit from './components/AlertEdit'
-import requireAuthentication from './utils/requireAuth'
+// import Profile from './components/Profile'
+// import AlertList from './components/AlertList'
+// import AlertEdit from './components/AlertEdit'
+// import requireAuthentication from './utils/requireAuth'
 
 class App extends Component {
     render() {
@@ -17,9 +17,9 @@ class App extends Component {
               <Switch>
                   <Route exact path="/" component={Home} />
 
-                  <Route path="/profile/:id" component={requireAuthentication(Profile)} />
-                  <Route path="/alerts" component={requireAuthentication(AlertList)} />
-                  <Route path="/alerts/:alert_id/edit" component={requireAuthentication(AlertEdit)} />
+                  {/* <Route path="/profile/:id" component={requireAuthentication(Profile)} /> */}
+                  {/* <Route path="/alerts" component={requireAuthentication(AlertList)} /> */}
+                  {/* <Route path="/alerts/:alert_id/edit" component={requireAuthentication(AlertEdit)} /> */}
                   <Route path="**" component={Home} />
               </Switch>
             </div>
