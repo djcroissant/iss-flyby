@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import { Switch, Route } from 'react-router-dom'
+
+import Home from './components/Home'
+import Profile from './components/Profile'
+import AlertList from './components/AlertList'
+import AlertEdit from './components/AlertEdit'
+import requireAuthentication from './utils/requireAuth'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        const pathname = window.location.pathname
+        return ( 
+            <div>
+              <Header />
+              <Switch>
+                  <Route exact path="/" component={Home} />
+
+                  <Route path="/profile/:id" component={requireAuthentication(Profile)} />
+                  <Route path="/alerts" component={requireAuthentication(AlertList)} />
+                  <Route path="/alerts/:alert_id/edit" component={requireAuthentication(AlertEdit)} />
+                  <Route path="**" component={Home} />
+              </Switch>
+            </div>
+        );
+    }
 }
 
 export default App;
