@@ -5,6 +5,7 @@ import Header from './components/Header.js'
 import Home from './components/Home.js'
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
+import Alerts from './components/Alerts.js'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/alerts" component={Alerts} />
         </Switch>
       </div>
     );

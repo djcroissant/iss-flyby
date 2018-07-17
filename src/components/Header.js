@@ -11,6 +11,7 @@ class Header extends Component {
             <nav className="nav">
                 <ul>
                     <li><a href="/">Home</a></li>
+                    <li><a href="/alerts">Alerts</a></li>
                     <li><a href="/login">Login</a></li>
                     <li><a href="/signup" className="button primary">Sign Up</a></li>
                 </ul>
