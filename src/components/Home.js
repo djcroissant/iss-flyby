@@ -16,7 +16,7 @@ import '../assets/css/react-select.css';
 
 const mapStateToProps = state => {
     return {
-        // to be implemented
+        flybys: state.api.flybys
     };
 };
 
