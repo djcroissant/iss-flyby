@@ -6,9 +6,11 @@ import Home from './components/Home.js'
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <Header />
-        <Home />
+        <div className="container">
+          <Home />
+        </div>
       </div>
     );
   }

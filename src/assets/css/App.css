@@ -25,3 +25,61 @@
   font-size: large;
 }
 
+.step-container {
+  border-style: solid;
+  border-width: 5px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.step-component {
+  float: left;
+  position: relative;
+  margin-right: 30px;
+}
+
+.time-selections {
+  border-style: solid;
+  border-width: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  width: 200%;
+
+}
+
+.time-select {
+  float: left;
+  position: relative;
+  margin-right: 30px;
+  width: 200%;
+}
+
+.step-component {
+  /* border-style: solid;
+  border-width: 5px; */
+}
+
+.middle {
+  position: absolute;
+  top: 50%;  
+  transform: translate(0, -50%);
+}
+
+.block-section {
+  border-style: solid;
+  border-width: 5px;
+  margin-top: 10px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 10px;
+}

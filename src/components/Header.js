@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import logo from '../assets/images/iss.png';
+// Import CSS
 import '../assets/css/App.css';
 import '../assets/css/html5up.css';
 
