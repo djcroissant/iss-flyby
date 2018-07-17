@@ -29,7 +29,7 @@ let port = process.env.PORT || 3001
 // add middleware libraries
 app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../build')));
 
 // define route namespaces
 app.use('/', homeRouter);

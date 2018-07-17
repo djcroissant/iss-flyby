@@ -21,6 +21,7 @@
   },
   "scripts": {
     "start": "node server/app.js",
+    "heroku-postbuild": "npm install && npm run build",
     "startreact": "react-scripts start",
     "devstart": "nodemon ./server/app.js",
     "build": "react-scripts build",
