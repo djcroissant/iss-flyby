@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 // Import CSS
 import '../assets/css/App.css';
 import '../assets/css/html5up.css';
+
+const mapStateToProps = state => {
+    return {
+        // to be implemented
+    };
+};
 
 class Login extends Component {
     render() {
@@ -38,4 +46,4 @@ class Login extends Component {
     };
 };
 
-export default Login;
+export default connect(mapStateToProps)(Login);

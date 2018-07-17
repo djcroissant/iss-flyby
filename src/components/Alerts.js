@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Select from 'react-select';
+
+import { connect } from 'react-redux';
 
 // Import images
 import iss_pic from '../assets/images/iss.png';
@@ -8,9 +9,13 @@ import iss_pic from '../assets/images/iss.png';
 import '../assets/css/App.css';
 import '../assets/css/html5up.css';
 
+const mapStateToProps = state => {
+    return {
+        // to be implemented
+    };
+};
+
 class Alerts extends Component {
-
-
     render() {
         return (
             <div className="container">
@@ -70,4 +75,4 @@ class AlertTable extends Component {
     }
 }
 
-export default Alerts;
+export default connect(mapStateToProps)(Alerts);

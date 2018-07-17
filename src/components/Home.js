@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
 
+import { connect } from 'react-redux';
+
 // Import images
 import circle_one from '../assets/images/circle_one.png';
 import circle_two from '../assets/images/circle_two.png';
@@ -11,6 +13,12 @@ import iss_pic from '../assets/images/iss.png';
 import '../assets/css/App.css';
 import '../assets/css/html5up.css';
 import '../assets/css/react-select.css';
+
+const mapStateToProps = state => {
+    return {
+        // to be implemented
+    };
+};
 
 class Home extends Component {
     hours = function range(size, startAt = 0, suffix) {
@@ -163,4 +171,4 @@ class FlybyRows extends Component {
     }
   }
 
-export default Home;
+export default connect(mapStateToProps)(Home);
