@@ -10,9 +10,9 @@ class Header extends Component {
         <header className="header">
             <nav className="nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#" className="button primary">Sign Up</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup" className="button primary">Sign Up</a></li>
                 </ul>
             </nav>
         </header>

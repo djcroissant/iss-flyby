@@ -9,9 +9,9 @@ class Login extends Component {
         return (
             <div className="container">
                 <div className="center-box">
-                    <h3>Log in or <a href="#">sign up</a></h3>
+                    <h3>Don't have an account yet?<a className="emphasis-link" href="#">Sign up</a></h3>
                     <hr />
-                    <h1>Log in with your email address and password</h1>
+                    <h1>Log in with your email address and password:</h1>
                     <form>
                         <label>
                             Email
@@ -27,7 +27,7 @@ class Login extends Component {
                                 type="password"
                             />
                         </label>
-                        <input type="submit" value="Submit" />
+                        <input className="center" type="submit" value="Submit" />
                     </form>
                 </div>
             </div>

@@ -9,9 +9,9 @@ class Login extends Component {
         return (
             <div className="container">
                 <div className="center-box">
-                    <h3>Already have an account? Then please <a href="#">log in</a></h3>
-                    <h1>Create and account</h1>
+                    <h3>Already have an account? Please<a className="emphasis-link" href="#">log in</a></h3>
                     <hr />
+                    <h1>Create an account:</h1>
                     <form>
                         <label>
                             Email
@@ -34,7 +34,7 @@ class Login extends Component {
                                 type="check"
                             />
                         </label>
-                        <input type="submit" value="Submit" />
+                        <input className="center" type="submit" value="Submit" />
                     </form>
                 </div>
             </div>
