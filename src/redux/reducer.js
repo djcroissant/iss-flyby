@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
-import alerts from './reducers/alerts.js';
-import api from './reducers/api.js';
+
+import homeForm from './reducers/homeForm.js';
 
 export default combineReducers({
-    alerts,
-    api,
+    homeForm
 });
