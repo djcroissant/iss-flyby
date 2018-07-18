@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Flyby from './Flyby.js';
 
-const FlybyTable = ({flybys}) => (
+const FlybyTable = ({ flybys }) => (
     <div className="block-section">
         <h2>Upcoming flyovers:</h2>
         <table>

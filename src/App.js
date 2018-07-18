@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 
 import Header from './components/Header.js'
-import Home from './components/Home.js'
+import HomeWrapper from './components/home_page/HomeWrapper.js'
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
 import Alerts from './components/Alerts.js'
@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={HomeWrapper} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/alerts" component={Alerts} />

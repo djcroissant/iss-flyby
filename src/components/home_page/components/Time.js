@@ -1,4 +1,5 @@
 import React from 'react';
+import Select from 'react-select';
 
 // Import images
 import circle_two from '../assets/images/circle_two.png';
