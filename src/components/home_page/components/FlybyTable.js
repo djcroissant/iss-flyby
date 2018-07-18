@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Flyby from './Flyby.js';
 
-const FlybyTable = ({ flybys }) => (
+const table = (flybys) => (
     <div className="block-section">
         <h2>Upcoming flyovers:</h2>
         <table>
@@ -22,6 +22,14 @@ const FlybyTable = ({ flybys }) => (
     </div>
 );
 
+function FlybyTable({ flybys }) {
+    if (flybys !== '') {
+        return table(flybys)
+    } else {
+        return null
+    }
+}
+
 FlybyTable.propTypes = {
     flybys: PropTypes.arrayOf(
         PropTypes.shape({
@@ -30,5 +38,6 @@ FlybyTable.propTypes = {
         }).isRequired
     ).isRequired
 }
+
 
 export default FlybyTable

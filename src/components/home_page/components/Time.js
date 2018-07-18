@@ -2,8 +2,25 @@ import React from 'react';
 import Select from 'react-select';
 
 // Import images
-import circle_two from '../assets/images/circle_two.png';
+import circle_two from '../../../assets/images/circle_two.png';
 
+function hours(size, startAt = 0, suffix) {
+    let startAtValue;
+    if (suffix === "p.m.") {
+        startAtValue = startAt + 12;
+    } else {
+        startAtValue = startAt;
+    }
+    return [...Array(size).keys()].map(i => ({value: (i + startAtValue), label: ((i + startAt).toString() + ":00" + suffix)}));
+}
+
+function time_range() {
+    let options = [{value: 12, label: "Noon"}]
+    options.push.apply(options, hours(11, 1, 'p.m.'));
+    options.push({value: 0, label: "Midnight"});
+    options.push.apply(options, hours(11, 1, 'a.m.'));
+    return options;
+};
 
 const Time = () => (
     <div className="step-container">
@@ -17,7 +34,7 @@ const Time = () => (
                     <span>Earliest:</span>
                     <Select 
                         name="time-select"
-                        options={this.time_range()} 
+                        options={time_range()} 
                         placeholder="Select a start time" 
                     />
                 </div>
@@ -25,7 +42,7 @@ const Time = () => (
                     <span>Latest:</span>
                     <Select 
                         name="time-select"
-                        options={this.time_range()} 
+                        options={time_range()} 
                         placeholder="Select a start time" 
                     />
                 </div>

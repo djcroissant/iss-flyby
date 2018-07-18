@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import images
-import circle_three from '../assets/images/circle_three.png';
+import circle_three from '../../../assets/images/circle_three.png';
 
 const Submit = () => (
     <div className="step-container">

@@ -8,10 +8,10 @@ const initialState = {
     longitude: '',
     earliest: '',
     latest: '',
-    flybys: [{}]
+    flybys: ''
 };
 
-export function homeForm(state=initialState, action) {
+function homeForm(state=initialState, action) {
     switch (action.type) {
         case QUERY_API:
             return {
@@ -22,3 +22,5 @@ export function homeForm(state=initialState, action) {
             return state;
     };
 };
+
+export default homeForm;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Import images
-import circle_one from '../assets/images/circle_one.png';
+import circle_one from '../../../assets/images/circle_one.png';
 
 const Location = () => (
     <div className="step-container">
