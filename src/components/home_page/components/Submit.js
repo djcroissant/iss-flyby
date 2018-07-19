@@ -6,6 +6,7 @@ import { queryApi } from '../../../redux/actions/actions.js'
 // Import images
 import circle_three from '../../../assets/images/circle_three.png';
 
+// Create dummy values until user input is hooked up
 let values = {
     latitude: 25,
     longitude: 50,
