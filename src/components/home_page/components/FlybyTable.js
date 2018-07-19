@@ -15,7 +15,7 @@ const table = (flybys) => (
             </thead>
             <tbody>
                 {flybys.map((flyby) => (
-                    <Flyby risetime={flyby.risetime} duration={flyby.duration} /> 
+                    <Flyby risetime={flyby.risetime} duration={flyby.duration} />
                 ))}
             </tbody>
         </table>
@@ -33,8 +33,8 @@ function FlybyTable({ flybys }) {
 FlybyTable.propTypes = {
     flybys: PropTypes.arrayOf(
         PropTypes.shape({
-            risetime: PropTypes.string.isRequired,
-            duration: PropTypes.string.isRequired
+            risetime: PropTypes.number.isRequired,
+            duration: PropTypes.number.isRequired
         }).isRequired
     ).isRequired
 }

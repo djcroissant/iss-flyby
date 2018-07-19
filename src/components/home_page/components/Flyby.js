@@ -33,8 +33,8 @@ const Flyby = ({risetime, duration}) => (
 );
 
 Flyby.propTypes = {
-    risetime: PropTypes.string.isRequired,
-    duration: PropTypes.string.isRequired
+    risetime: PropTypes.number.isRequired,
+    duration: PropTypes.number.isRequired
 }
 
 export default Flyby
