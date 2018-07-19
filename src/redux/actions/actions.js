@@ -4,13 +4,13 @@ import axios from 'axios';
 export const QUERY_API = 'QUERY_API';
 
 // Creat dummy values until user input is hooked up
-let values = {
-    latitude: 25,
-    longitude: 50,
-    number: 100
-}
+// let values = {
+//     latitude: 25,
+//     longitude: 50,
+//     number: 100
+// }
 
-export function queryAPI(values) {
+export function queryApi(values) {
     return (dispatch) => {
         axios.get(
             "http://api.open-notify.org/iss-pass.json?lat=" +
