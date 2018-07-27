@@ -7,13 +7,14 @@ export function queryApi(values=values) {
     return (dispatch) => {
 
         const request = axios.get(
-            "http://api.open-notify.org/iss-pass.json?lat=" +
+            "https://open-notify.herokuapp.com/iss-pass.json?lat=" +
             values.latitude.toString() +
             "&lon=" +
             values.longitude.toString() +
             "&n=" +
             values.number.toString()
-        )
+        );
+        console.log(request);
         
         return request.then(response => {
             let apiResponse = response.data.response;

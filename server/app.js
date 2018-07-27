@@ -5,6 +5,7 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const homeRouter = require('./routes/home.js');
 const alertRouter = require('./routes/alerts.js');
@@ -12,7 +13,7 @@ const locationRouter = require('./routes/locations.js');
 const userRouter = require('./routes/users.js');
 
 const app = express();
-
+app.use(cors());
 
 // Setup default mongoose connection
 const mongoDB = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds235411.mlab.com:35411/iss_tracker`;
