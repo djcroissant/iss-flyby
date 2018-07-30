@@ -2,10 +2,10 @@ import React from 'react';
 
 // Import components
 import PageInfo from './components/PageInfo.js';
-import Location from './components/Location.js';
 import Time from './components/Time.js';
 
 // Import containers
+import Location from './containers/Location.js';
 import FlybyTable from './containers/FlybyTable.js';
 import Submit from './containers/Submit.js';
 
