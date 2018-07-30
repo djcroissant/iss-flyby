@@ -1,9 +1,15 @@
 import axios from 'axios';
 
-// Action types
-export const QUERY_API = 'QUERY_API';
+export function updateLocation (location) {
+  return (dispatch) => {
+    dispatch({
+      type: 'UPDATE_LOCATION',
+      location
+    })
+  }
+}
 
-export function queryApi(values=values) {
+export function queryApi(values) {
     return (dispatch) => {
 
         const request = axios.get(
