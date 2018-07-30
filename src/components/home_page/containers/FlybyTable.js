@@ -3,7 +3,7 @@ import FlybyTableComponent from '../components/FlybyTable.js'
 
 const mapStateToProps = (state) => {
     return {
-        flybys: state.home.flybys
+        flybys: state.issApi.flybys
     }
 }
 

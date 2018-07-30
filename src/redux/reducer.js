@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import homeForm from './reducers/homeForm.js';
+import issApi from './reducers/issApi.js';
 
 const rootReducer = combineReducers({
-    home: homeForm
+    issApi: issApi
 })
 
 export default rootReducer

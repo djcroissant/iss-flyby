@@ -11,7 +11,7 @@ const initialState = {
     flybys: ''
 };
 
-function homeForm(state=initialState, action) {
+function issApi(state=initialState, action) {
     switch (action.type) {
         case QUERY_API:
             return {
@@ -23,4 +23,4 @@ function homeForm(state=initialState, action) {
     };
 };
 
-export default homeForm;
+export default issApi
