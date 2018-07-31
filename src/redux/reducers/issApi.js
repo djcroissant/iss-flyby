@@ -3,7 +3,7 @@
 // } from '../actions/actions.js';
 
 const initialState = {
-    location: 'initialVal',
+    location: 'seattle',
     latitude: '',
     longitude: '',
     earliest: '',

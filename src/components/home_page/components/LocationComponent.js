@@ -19,7 +19,7 @@ class LocationComponent extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    updateCoordinates()
+    updateCoordinates(this.state.location)
   }
 
   render() {

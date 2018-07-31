@@ -1,14 +1,5 @@
 import axios from 'axios';
 
-// export function updateLocation (location) {
-//   return (dispatch) => {
-//     dispatch({
-//       type: 'UPDATE_LOCATION',
-//       location
-//     })
-//   }
-// }
-
 export const updateLocation = (location) => {
   console.log(location)
   return ({
@@ -18,42 +9,53 @@ export const updateLocation = (location) => {
 }
 
 
-export function updateCoordinates (location) {
-  // replace these static variables with a call to Google Maps API
-  const latitude = 50
-  const longitude = 45
-  console.log('updating coordinates with DEFAULT values.')
 
+
+export function updateCoordinates(location) {
   return (dispatch) => {
-    dispatch({
-      type: 'UPDATE_COORDINATES',
-      latitude,
-      longitude
+    let url = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+    url = url + location.replace(" ", "+")
+    url = url + "&key=" + "secret_key"
+    console.log(url)
+
+    const request = axios.get(url)
+
+    return request.then(response => {
+      let latitude = response.results[0].geometry.location.lat
+      let longitude = response.results[0].geometry.location.lng
+      console.log(response)
+      dispatch({
+        type: 'UPDATE_COORDINATES',
+        latitude,
+        longitude
+      })
+    }).catch((err) => {
+      console.log(err)
     })
   }
-}
+} 
 
 export function queryApi(values) {
-    return (dispatch) => {
+  return (dispatch) => {
 
-        const request = axios.get(
-            "https://open-notify.herokuapp.com/iss-pass.json?lat=" +
-            values.latitude.toString() +
-            "&lon=" +
-            values.longitude.toString() +
-            "&n=" +
-            values.number.toString()
-        );
-        console.log(request);
-        
-        return request.then(response => {
-            let apiResponse = response.data.response;
-            dispatch({
-                type: 'QUERY_API',
-                apiResponse
-            })
-        }).catch((err) => {
-            console.log(err);
-        });
-    };
+    const request = axios.get(
+      "https://open-notify.herokuapp.com/iss-pass.json?lat=" +
+      values.latitude.toString() +
+      "&lon=" +
+      values.longitude.toString() +
+      "&n=" +
+      values.number.toString()
+    );
+    console.log(request);
+
+    return request.then(response => {
+      let apiResponse = response.data.response;
+      dispatch({
+        type: 'QUERY_API',
+        apiResponse
+      })
+    }).catch((err) => {
+      console.log(err);
+    });
+  };
 };
