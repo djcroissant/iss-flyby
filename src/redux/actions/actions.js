@@ -1,10 +1,34 @@
 import axios from 'axios';
 
-export function updateLocation (location) {
+// export function updateLocation (location) {
+//   return (dispatch) => {
+//     dispatch({
+//       type: 'UPDATE_LOCATION',
+//       location
+//     })
+//   }
+// }
+
+export const updateLocation = (location) => {
+  console.log(location)
+  return ({
+    type: 'UPDATE_LOCATION',
+    location
+  })
+}
+
+
+export function updateCoordinates (location) {
+  // replace these static variables with a call to Google Maps API
+  const latitude = 50
+  const longitude = 45
+  console.log('updating coordinates with DEFAULT values.')
+
   return (dispatch) => {
     dispatch({
-      type: 'UPDATE_LOCATION',
-      location
+      type: 'UPDATE_COORDINATES',
+      latitude,
+      longitude
     })
   }
 }

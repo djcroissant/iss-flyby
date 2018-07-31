@@ -3,7 +3,7 @@
 // } from '../actions/actions.js';
 
 const initialState = {
-    location: '',
+    location: 'initialVal',
     latitude: '',
     longitude: '',
     earliest: '',
@@ -22,6 +22,12 @@ function issApi(state=initialState, action) {
       return {
         ...state,
         location: action.location
+      }
+    case 'UPDATE_COORDINATES':
+      return {
+        ...state,
+        latitude: action.latitude,
+        longitude: action.longitude
       }
     default:
       return state

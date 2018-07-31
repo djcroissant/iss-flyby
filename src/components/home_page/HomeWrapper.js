@@ -5,7 +5,7 @@ import PageInfo from './components/PageInfo.js';
 import Time from './components/Time.js';
 
 // Import containers
-import Location from './containers/Location.js';
+import LocationContainer from './containers/LocationContainer.js';
 import FlybyTable from './containers/FlybyTable.js';
 import Submit from './containers/Submit.js';
 
@@ -17,7 +17,7 @@ import '../../assets/css/react-select.css';
 const HomeWrapper = () => (
   <div>
     <PageInfo />
-    <Location />
+    <LocationContainer />
     <Time />
     <Submit />
     <FlybyTable />
