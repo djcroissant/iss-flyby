@@ -14,3 +14,8 @@ exports.location_create_post = (req, res) => {
 exports.location_delete_post = (req, res) => {
     res.send('NOT IMPLEMENTED: Location delete POST: ' + req.params.id);
 };
+
+// Handle Google Maps API query
+exports.location_api_query = (req, res) => {
+  res.send('NOT IMPLEMENTED: API QUERY: ' + req.params.location_query)
+};
