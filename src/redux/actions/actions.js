@@ -1,22 +1,30 @@
 import axios from 'axios';
 
 export const updateLocation = (location) => {
-  console.log(location)
   return ({
     type: 'UPDATE_LOCATION',
     location
   })
 }
+ function requestCoordinates(location) {
+   return{
+     type: REQUEST_COORDINATES,
+     location
+   }
+ }
+
+ function receiveCoordinates(location, json) {
+   return {
+     type: RECEIVE_COORDINATES,
+     location,
+     latitude: json.data.latitude,
+     longitude: json.data.longitude
+   }
+ }
 
 // export const updateCoordinates = (location) => {
-//   let url = "https://maps.googleapis.com/maps/api/geocode/json?address=";
-//       url = url + location.replace(" ", "+")
-//       url = url + "&key=" + "AIzaSyDuBk79WTkUsUz_2cuy-O7nP_6LI2WtYWo"
-//       console.log(url)
 //   const latitude=50
 //   const longitude=40
-
-
 
 //   return ({
 //     type: 'UPDATE_COORDINATES',
@@ -25,23 +33,30 @@ export const updateLocation = (location) => {
 //   })
 // }
 
-export const updateCoordinates = (location) => {
-  const latitude=50
-  const longitude=40
 
+
+
+export function updateCoordinates(location) {
   const location_query = location.replace(" ", "+")
   const url="http://localhost:3001/"
+  let latitude=5
+  let longitude=6
+  console.log('hi!!!')
 
 
   const request = axios.get(`${url}locations/api_query/${location_query}`)
-  request.then(response => {
-    console.log(response)
-  })
-  return ({
+  return (request.then(response => ({
+    // latitude = response.data.latitude
+    // longitude = response.data.longitude 
     type: 'UPDATE_COORDINATES',
     latitude,
     longitude
-  })
+  })))
+  // return ({
+  //   type: 'UPDATE_COORDINATES',
+  //   latitude,
+  //   longitude
+  // })
 }
 
 

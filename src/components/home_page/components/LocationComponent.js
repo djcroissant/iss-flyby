@@ -14,12 +14,12 @@ class LocationComponent extends React.Component {
 
   handleChange(event) {
     this.setState({location: event.target.value})
-    updateLocation(event.target.value)
+    this.props.onChangeLocation(event.target.value)
   }
 
   handleSubmit(event) {
     event.preventDefault()
-    updateCoordinates(this.state.location)
+    this.props.onSubmitLocation(this.state.location)
   }
 
   render() {

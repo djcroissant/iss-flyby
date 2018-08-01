@@ -8,10 +8,16 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = ({
-  onSubmitLocation: updateCoordinates,
-  onChangeLocation: updateLocation
-})
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    onChangeLocation: (location) => {
+      dispatch(updateLocation(location))
+    },
+    onSubmitLocation: (location) => {
+      dispatch(updateCoordinates(location))
+    }
+  }
+}
 
 const LocationContainer = connect(
   mapStateToProps,
