@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-import { queryApi } from '../../../redux/actions/actions.js'
+import { fetchFlybys } from '../../../redux/actions/actions.js'
 
 // Import images
 import circle_three from '../../../assets/images/circle_three.png';
@@ -22,7 +22,7 @@ const Submit = ({ dispatch }) => (
             <form
                 onSubmit={e => {
                     e.preventDefault()
-                    dispatch(queryApi(values))
+                    dispatch(fetchFlybys(values))
                 }}
             >
                 <button type="submit" className="button middle calculate">

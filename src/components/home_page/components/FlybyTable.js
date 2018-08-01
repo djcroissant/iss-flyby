@@ -23,7 +23,7 @@ const table = (flybys) => (
 );
 
 function FlybyTable({ flybys }) {
-    if (flybys !== '') {
+    if (flybys.length < 0) {
         return table(flybys)
     } else {
         return null
