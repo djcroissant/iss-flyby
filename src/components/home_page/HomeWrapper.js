@@ -6,8 +6,8 @@ import Time from './components/Time.js';
 
 // Import containers
 import LocationContainer from './containers/LocationContainer.js';
-import FlybyTable from './containers/FlybyTable.js';
-import Submit from './containers/Submit.js';
+import FlybyTableContainer from './containers/FlybyTableContainer.js';
+import SubmitContainer from './containers/SubmitContainer.js';
 
 // Import CSS
 import '../../assets/css/App.css';
@@ -19,8 +19,8 @@ const HomeWrapper = () => (
     <PageInfo />
     <LocationContainer />
     <Time />
-    <Submit />
-    <FlybyTable />
+    <SubmitContainer />
+    <FlybyTableContainer />
   </div>
 )
 

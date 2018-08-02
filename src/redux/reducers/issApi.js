@@ -21,7 +21,7 @@ const initialState = {
       latest: ''
     },
     flybys: {
-      apiResponse: '',
+      flybys: [],
       isFetching: false,
       didInvalidate: false,
       lastUpdated: ''

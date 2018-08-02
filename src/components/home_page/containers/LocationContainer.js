@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onChangeLocation: (location) => {
       dispatch(updateLocation(location))
