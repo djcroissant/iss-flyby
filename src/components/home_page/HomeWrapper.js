@@ -3,6 +3,7 @@ import React from 'react';
 // Import components
 import PageInfo from './components/PageInfo.js';
 import Time from './components/Time.js';
+import Map from './components/Map.js';
 
 // Import containers
 import LocationContainer from './containers/LocationContainer.js';

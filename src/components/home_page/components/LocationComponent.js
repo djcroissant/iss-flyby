@@ -1,8 +1,12 @@
 import React from 'react';
 
+import Map from './Map.js'
+
+// Import CSS
+import '../../../assets/css/map.css';
+
 // Import images
 import circle_one from '../../../assets/images/circle_one.png';
-import { updateLocation, updateCoordinates } from '../../../redux/actions/actions';
 
 class LocationComponent extends React.Component {
   constructor(props) {
@@ -36,12 +40,7 @@ class LocationComponent extends React.Component {
           </form>
         </div>
         <div className="step-component">
-          <h3>MAP</h3>
-          <h3>MAP</h3>
-          <h3>MAP</h3>
-          <h3>MAP</h3>
-          <h3>MAP</h3>
-          <h3>MAP</h3>
+          <Map />
         </div>
       </div>
     )
