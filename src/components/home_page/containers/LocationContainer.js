@@ -4,8 +4,7 @@ import LocationComponent from '../components/LocationComponent.js'
 
 const mapStateToProps = (state) => {
     return {
-        location: state.issApi.location.userInput,
-        coordinates: state.issApi.location.coordinates
+        location: state.issApi.location.userInput
     }
 }
 

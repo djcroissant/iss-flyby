@@ -8,13 +8,16 @@ import {
 
 const initialState = {
     location: {
-      userInput: 'seattle',
+      userInput: '',
       isFetching: false,
       didInvalidate: false,
       coordinates: {
         latitude: 47.6062,
-        longitude: 122.3321
+        longitude: -122.3321
       }
+    },
+    map: {
+      zoom: 0
     },
     time_window: {
       earliest: '',
@@ -55,6 +58,10 @@ function issApi(state=initialState, action) {
           isFetching: false,
           didInvalidate: false,
           coordinates: action.coordinates
+        },
+        map: {
+          ...state.map,
+          zoom: action.zoom
         }
       })
     case REQUEST_FLYBYS:

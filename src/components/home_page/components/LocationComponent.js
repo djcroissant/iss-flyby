@@ -12,12 +12,10 @@ class LocationComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      location: this.props.location,
-      coordinates: this.props.coordinates}
+      location: this.props.location
+    }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    console.log('hiiiii')
-    console.log(this.state)
   }
 
   handleChange(event) {

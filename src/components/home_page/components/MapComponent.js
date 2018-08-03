@@ -9,7 +9,7 @@ const AnyReactComponent = ({ text }) => <div>{ text }</div>;
 class Map extends React.Component {
   static defaultProps = {
     defaultCenter: {lat: 47.6062, lng: -122.3321},
-    defaultZoom: 5
+    defaultZoom: 0
   }
 
   render() {

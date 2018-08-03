@@ -22,7 +22,8 @@ function receiveCoordinates(response) {
     coordinates: {
       latitude: response.data.latitude,
       longitude: response.data.longitude
-    }
+    },
+    zoom: 12
   }
 }
 
