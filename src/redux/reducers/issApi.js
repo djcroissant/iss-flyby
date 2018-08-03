@@ -12,8 +12,8 @@ const initialState = {
       isFetching: false,
       didInvalidate: false,
       coordinates: {
-        latitude: '',
-        longitude: ''
+        latitude: 47.6062,
+        longitude: 122.3321
       }
     },
     time_window: {

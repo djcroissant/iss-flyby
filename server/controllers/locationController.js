@@ -21,7 +21,7 @@ exports.location_delete_post = (req, res) => {
 exports.location_api_query = (req, res) => {
   let url = "https://maps.googleapis.com/maps/api/geocode/json?address=";
   url = url + req.params.location_query;
-  url = url + "&key=" + process.env.GOOGLE_MAPS_KEY;
+  url = url + "&key=" + process.env.GOOGLE_MAPS_KEY_OLD;
 
   const request = axios.get(url);
   request.then(response => {

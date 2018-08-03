@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Map from './Map.js'
+import MapContainer from '../containers/MapContainer.js'
 
 // Import CSS
 import '../../../assets/css/map.css';
@@ -11,9 +11,13 @@ import circle_one from '../../../assets/images/circle_one.png';
 class LocationComponent extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {location: this.props.location}
+    this.state = {
+      location: this.props.location,
+      coordinates: this.props.coordinates}
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    console.log('hiiiii')
+    console.log(this.state)
   }
 
   handleChange(event) {
@@ -40,7 +44,7 @@ class LocationComponent extends React.Component {
           </form>
         </div>
         <div className="step-component">
-          <Map />
+          <MapContainer />
         </div>
       </div>
     )

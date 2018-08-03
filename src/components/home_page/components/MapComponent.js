@@ -8,8 +8,8 @@ const AnyReactComponent = ({ text }) => <div>{ text }</div>;
 
 class Map extends React.Component {
   static defaultProps = {
-    center: { lat: 40.7446790, lng: -73.9485420 },
-    zoom: 11
+    defaultCenter: {lat: 47.6062, lng: -122.3321},
+    defaultZoom: 5
   }
 
   render() {
@@ -18,13 +18,15 @@ class Map extends React.Component {
       <div className="map-container">
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyDuBk79WTkUsUz_2cuy-O7nP_6LI2WtYWo" }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          defaultCenter={this.props.defaultCenter}
+          defaultZoom={this.props.defaultZoom}
+          center={this.props.center}
+          zoom={this.props.zoom}
         >
           <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text={'Kreyser Avrora'}
+            lat={this.props.center.lat}
+            lng={this.props.center.lng}
+            text={"I'm a Map!"}
           />
         </GoogleMapReact>
       </div>
