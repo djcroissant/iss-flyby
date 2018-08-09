@@ -44,13 +44,27 @@
   margin-top: 10px;
   margin-bottom: 10px;
   display: flex;
-  width: 200%;
-
+  flex-direction: row;
 }
 
-.time-select {
-  /* margin-right: 30px; */
+.time-select span {
+  margin: 10px;
 }
+
+/* .react-time-picker__button__input {
+  margin: 10px;
+} */
+
+.react-time-picker__button__input__input.react-time-picker__button__input__amPm {
+  width: 70px !important;
+  padding: 10px !important;
+}
+
+.react-time-picker input {
+  width: 90px;
+}
+
+
 
 .step-component {
   /* border-style: solid;
