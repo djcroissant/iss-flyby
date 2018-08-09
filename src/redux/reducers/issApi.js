@@ -22,8 +22,8 @@ const initialState = {
       zoom: 0
     },
     time_window: {
-      on: '',
-      off: ''
+      on: '22:00',
+      off: '02:00'
     },
     flybys: {
       flybys: [],
