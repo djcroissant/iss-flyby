@@ -2,10 +2,10 @@ import React from 'react';
 
 // Import components
 import PageInfo from './components/PageInfo.js';
-import Time from './components/Time.js';
 
 // Import containers
 import LocationContainer from './containers/LocationContainer.js';
+import TimeContainer from './containers/TimeContainer.js';
 import FlybyTableContainer from './containers/FlybyTableContainer.js';
 import SubmitContainer from './containers/SubmitContainer.js';
 
@@ -18,7 +18,7 @@ const HomeWrapper = () => (
   <div>
     <PageInfo />
     <LocationContainer />
-    <Time />
+    {/* <TimeContainer /> */}
     <SubmitContainer />
     <FlybyTableContainer />
   </div>

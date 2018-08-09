@@ -7,7 +7,8 @@ import circle_two from '../../../assets/images/circle_two.png';
 class TimeComponent extends React.Component {
   constructor(props) {
     super(props)
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChangeOn = this.handleChangeOn.bind(this)
+    this.handleChangeOff = this.handleChangeOff.bind(this)
   }
 
   handleChangeOn(time) {
