@@ -1,5 +1,7 @@
 import {
     UPDATE_LOCATION,
+    UPDATE_TIME_ON,
+    UPDATE_TIME_OFF,
     REQUEST_COORDINATES,
     RECEIVE_COORDINATES,
     REQUEST_FLYBYS,
@@ -39,6 +41,22 @@ function issApi(state=initialState, action) {
         location: {
           ...state.location,
           userInput: action.userInput
+        }
+      })
+    case UPDATE_TIME_ON:
+      return Object.assign({}, state, {
+        ...state,
+        time_window: {
+          ...state.time_window,
+          on: action.time
+        }
+      })
+    case UPDATE_TIME_OFF:
+      return Object.assign({}, state, {
+        ...state,
+        time_window: {
+          ...state.time_window,
+          off: action.time
         }
       })
     case REQUEST_COORDINATES:
