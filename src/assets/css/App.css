@@ -49,10 +49,7 @@
 }
 
 .time-select {
-  float: left;
-  position: relative;
-  margin-right: 30px;
-  width: 200%;
+  /* margin-right: 30px; */
 }
 
 .step-component {

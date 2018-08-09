@@ -14,12 +14,13 @@ class TimeComponent extends React.Component {
   handleChangeOn(time) {
     this.props.onChangeTimeOn(time)
   }
-
+  
   handleChangeOff(time) {
     this.props.onChangeTimeOff(time)
   }
 
   render() {
+    console.log("props time: ", this.props.time)
     return (
       <div className="step-container">
         <div className="step-component">

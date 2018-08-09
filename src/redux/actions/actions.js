@@ -10,20 +10,17 @@ export function updateLocation(userLocationInput) {
 
 export const UPDATE_TIME_ON = 'UPDATE_TIME_ON'
 export function updateTimeOn(time) {
+  console.log("action time on: ", time)
   return {
     type: UPDATE_TIME_ON,
-    time_window: {
-      on: time
-    }
+    time: time
   }
 }
 export const UPDATE_TIME_OFF = 'UPDATE_TIME_OFF'
 export function updateTimeOff(time) {
   return {
     type: UPDATE_TIME_OFF,
-    time_window: {
-      off: time
-    }
+    time: time
   }
 }
 
