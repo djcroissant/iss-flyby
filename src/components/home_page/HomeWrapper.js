@@ -12,13 +12,12 @@ import SubmitContainer from './containers/SubmitContainer.js';
 // Import CSS
 import '../../assets/css/App.css';
 import '../../assets/css/html5up.css';
-import '../../assets/css/react-select.css';
 
 const HomeWrapper = () => (
   <div>
     <PageInfo />
     <LocationContainer />
-    {/* <TimeContainer /> */}
+    <TimeContainer />
     <SubmitContainer />
     <FlybyTableContainer />
   </div>
