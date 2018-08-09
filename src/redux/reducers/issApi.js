@@ -20,8 +20,8 @@ const initialState = {
       zoom: 0
     },
     time_window: {
-      earliest: '',
-      latest: ''
+      on: '',
+      off: ''
     },
     flybys: {
       flybys: [],

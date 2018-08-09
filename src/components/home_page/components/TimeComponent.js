@@ -10,8 +10,12 @@ class TimeComponent extends React.Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(time) {
-    this.props.onChangeTime(time)
+  handleChangeOn(time) {
+    this.props.onChangeTimeOn(time)
+  }
+
+  handleChangeOff(time) {
+    this.props.onChangeTimeOff(time)
   }
 
   render() {
@@ -26,15 +30,15 @@ class TimeComponent extends React.Component {
             <div className="time-select">
               <span>Earliest:</span>
               <TimePicker
-                onChange={this.handleChange}
-                value={this.props.time.earliest}
+                onChange={this.handleChangeOn}
+                value={this.props.time.on}
               />
             </div>
             <div className="time-select">
               <span>Latest:</span>
               <TimePicker
-                onChange={this.handleChange}
-                value={this.props.time.latest}
+                onChange={this.handleChangeOff}
+                value={this.props.time.off}
               />
             </div>
           </div>
