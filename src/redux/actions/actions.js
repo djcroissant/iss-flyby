@@ -8,6 +8,25 @@ export function updateLocation(userLocationInput) {
   }
 }
 
+export const UPDATE_TIME_ON = 'UPDATE_TIME_ON'
+export function updateTimeOn(time) {
+  return {
+    type: UPDATE_TIME_ON,
+    time_window: {
+      on: time
+    }
+  }
+}
+export const UPDATE_TIME_OFF = 'UPDATE_TIME_OFF'
+export function updateTimeOff(time) {
+  return {
+    type: UPDATE_TIME_OFF,
+    time_window: {
+      off: time
+    }
+  }
+}
+
 export const REQUEST_COORDINATES = 'REQUEST_COORDINATES'
 function requestCoordinates() {
   return {
