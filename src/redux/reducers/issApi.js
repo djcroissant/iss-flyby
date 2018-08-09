@@ -23,7 +23,7 @@ const initialState = {
     },
     time_window: {
       on: '22:00',
-      off: '02:00'
+      off: '00:00'
     },
     flybys: {
       flybys: [],
