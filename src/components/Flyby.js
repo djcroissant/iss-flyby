@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ms_to_time, ms_to_date, s_to_min } from '../../../helpers/time_conversions.js'
+import { ms_to_time, ms_to_date, s_to_min } from '../helpers/time_conversions.js'
 
 const Flyby = ({risetime, duration}) => (
     <tr key={risetime.toString()}>

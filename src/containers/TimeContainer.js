@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { updateTimeOn, updateTimeOff } from '../../../redux/actions/actions.js'
+import { updateTimeOn, updateTimeOff } from '../redux/actions/actions.js'
 import TimeComponent from '../components/TimeComponent.js'
 
 const mapStateToProps = (state) => {

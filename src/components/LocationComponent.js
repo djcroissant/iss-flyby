@@ -3,10 +3,10 @@ import React from 'react';
 import MapContainer from '../containers/MapContainer.js'
 
 // Import CSS
-import '../../../assets/css/map.css';
+import '../assets/css/map.css';
 
 // Import images
-import circle_one from '../../../assets/images/circle_one.png';
+import circle_one from '../assets/images/circle_one.png';
 
 class LocationComponent extends React.Component {
   constructor(props) {

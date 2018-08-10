@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Flyby from './Flyby.js';
-import { ms_to_time, ms_to_date, twelve_to_twentyfour } from '../../../helpers/time_conversions.js'
+import { ms_to_time, ms_to_date, twelve_to_twentyfour } from '../helpers/time_conversions.js'
 
 function checkResults(flybys, time) {
   let results = false

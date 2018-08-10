@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { updateLocation, fetchCoordinates } from '../../../redux/actions/actions.js'
+import { updateLocation, fetchCoordinates } from '../redux/actions/actions.js'
 import LocationComponent from '../components/LocationComponent.js'
 
 const mapStateToProps = (state) => {

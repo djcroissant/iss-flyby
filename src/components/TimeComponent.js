@@ -2,7 +2,7 @@ import React from 'react';
 import TimePicker from 'react-time-picker';
 
 // Import images
-import circle_two from '../../../assets/images/circle_two.png';
+import circle_two from '../assets/images/circle_two.png';
 
 class TimeComponent extends React.Component {
   constructor(props) {

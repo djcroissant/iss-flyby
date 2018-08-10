@@ -1,6 +1,6 @@
 import React from 'react';
 
-import iss_pic from '../../../assets/images/iss.png';
+import iss_pic from '../assets/images/iss.png';
 
 const PageInfo = () => (
     <div className="block-section">

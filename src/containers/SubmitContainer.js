@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { fetchFlybys } from '../../../redux/actions/actions.js'
+import { fetchFlybys } from '../redux/actions/actions.js'
 import SubmitComponent from '../components/SubmitComponent.js'
 
 const mapStateToProps = (state) => {

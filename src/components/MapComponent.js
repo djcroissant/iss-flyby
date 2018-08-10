@@ -2,7 +2,7 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react'
 
 // Import CSS
-import '../../../assets/css/map.css';
+import '../assets/css/map.css';
 
 const AnyReactComponent = ({ text }) => <div>{ text }</div>;
 
