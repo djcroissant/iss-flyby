@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 
 import Header from './components/Header.js'
-import HomeWrapper from './components/home_page/HomeWrapper.js'
+import HomeWrapper from './components/HomeWrapper.js'
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
 import Alerts from './components/Alerts.js'
